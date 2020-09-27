@@ -75,10 +75,11 @@ public class UserController {
 		logger.info("post login");
 		
 		UserDTO login = service.login(dto);
-		System.out.println(login);
-		System.out.println(login);
-		System.out.println(login);
+		System.out.println(login.getDomain());
+		System.out.println(login.getId());
+		System.out.println(login.getName());
 		HttpSession session = req.getSession();
+		
 		if(login == null) {
 			session.setAttribute("loginDTO", null);
 			rttr.addFlashAttribute("msg", false);

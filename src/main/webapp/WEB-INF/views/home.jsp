@@ -14,8 +14,6 @@
 	</head>
 <body style="height:2000px">
 
-
-
 <div class="jumbotron text-center">
 	<h1> Hello world! </h1>
 	<p>Resize this responsive page to see the effect!</p> 

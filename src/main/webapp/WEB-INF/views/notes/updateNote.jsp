@@ -27,11 +27,12 @@
 
 <div class="container mt-3">
  
-  <form action="write" method="post">
+  <form action="update" method="post">
+  	<input type="hidden" name="num" value="${read.num}" readonly="readonly"/>
   	<div class="input-group mb-3">
       <div class="col-sm-2">
-        <select id="category" name="category" class="custom-select">
-          <option selected>카테고리</option>
+        <select id="category" name="category" class="custom-select" >
+          <option selected >카테고리</option>
           <option value="예약">예약</option>
           <option value="분실">분실</option>
           <option value="전달">전달</option>
@@ -42,7 +43,7 @@
         <span class="input-group-text" >제목</span>
       </div>
       
-      <input type="text" class="form-control" id="title" name="title">
+      <input type="text" class="form-control" id="title" name="title" value="${read.title}">
       
       </div>
 <!-- 	    <div class="custom-control custom-checkbox mb-3"> -->
@@ -57,14 +58,14 @@
     
     
 	  <div class="form-group mb-3">
-	  <textarea class="form-control" rows="15" id="contents" name="contents" placeholder="comment"></textarea>
+	  <textarea class="form-control" rows="15" id="contents" name="contents" placeholder="comment"><c:out value="${read.contents}" /></textarea>
 	  </div>
-	  <div class="input-group mb-3">
-  	<div class="input-group-prepend">
+	<div class="input-group mb-3">
+  	  <div class="input-group-prepend">
         <span class="input-group-text">부서 선택</span>
       </div>
-      <input type="text" class="form-control" id="parts" name="parts">
-      </div>
+      <input type="text" class="form-control" id="parts" name="parts" value="${read.parts}">
+     </div>
     <button type="submit" id="submit" class="btn btn-primary">Submit</button>
   </form>
 </div>
